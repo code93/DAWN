@@ -8,4 +8,6 @@ d = ast.literal_eval(data)
 
 df = pd.DataFrame(d)
 
+df =df.T
+
 print(df)

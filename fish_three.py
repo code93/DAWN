@@ -6,7 +6,7 @@ import pandas as pd
 
 powdig = []
 d = []
-for i in range(1, 10000):
+for i in range(1, 1000):
     p = str(pow(i,i))    
     for j in range(0,10):
         d.append(p.count(str(j)))
@@ -19,7 +19,7 @@ for i in range(1, 10000):
 
 var = []
 
-def par(N=10, m=5):
+def par(N=10, m=3):
     x = range(N)
     comb = [com for com in combinations(x,m)]
     tot = int(len(list(combinations(x,m)))/2)
@@ -37,6 +37,7 @@ for l in range(0,len(comb)):
     for i in range(0,len(powdig)):
         sum1 = 0
         sum2 = 0
+        sum3 = 0
         for com in list(comb[l]):
             sum1 =  sum1 + powdig[i][com]
         for num in list(set(numb) - set(comb[l])):
